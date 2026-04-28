@@ -8,7 +8,7 @@
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(to bottom, #f8fbff, #eef3f8);
+    background: #f9fbff;
     color: #111;
 }
 
@@ -18,57 +18,61 @@ header {
 }
 
 h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+    font-size: 48px;
 }
 
 .subtitle {
-    font-size: 18px;
-    color: #555;
-    max-width: 700px;
+    max-width: 800px;
     margin: auto;
+    color: #555;
+    font-size: 18px;
 }
 
-.container {
+.section {
     width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 0;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+h2 {
+    border-bottom: 2px solid #e0e6ed;
+    padding-bottom: 10px;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    gap: 20px;
 }
 
 .card {
     background: white;
-    border-radius: 14px;
-    padding: 25px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e6ecf2;
     transition: 0.2s;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-}
-
-.card h3 {
-    margin-top: 0;
-}
-
-.card p {
-    color: #555;
-    font-size: 14px;
+    transform: translateY(-4px);
 }
 
 .card a {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 8px;
     text-decoration: none;
     color: #1a73e8;
     font-weight: bold;
+}
+
+.button {
+    background: #1a73e8;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
 }
 
 footer {
@@ -82,85 +86,151 @@ footer {
 <body>
 
 <header>
-    <h1>🚀 HLM-Vision Benchmark</h1>
-    <p class="subtitle">
-        Human vs. Language Model Benchmark for Visual Classification Across Diverse Domains.
-        A unified multi-domain benchmark spanning 10 datasets for robust evaluation.
-    </p>
+<h1>🚀 HLM-Vision</h1>
+
+<p class="subtitle">
+<b>Human vs. Language Model Benchmark</b> for <b>CNN-based Image Classification</b> across diverse domains.  
+A unified multi-domain benchmark spanning 10 datasets to evaluate robustness, generalization, and cross-domain learning in vision models.
+</p>
+
+<div>
+<!-- <a class="button" href="#">📄 Paper (Coming Soon)</a> -->
+<a class="button" href="https://www.kaggle.com/">📊 Dataset</a>
+</div>
 </header>
 
-<div class="container">
+<!-- ================== Motivation ================== -->
+<div class="section">
+<h2>📌 Motivation</h2>
+<p>
+Most image classification models are evaluated on single-domain datasets.
+HLM-Vision introduces a unified benchmark to evaluate CNN-based models across diverse domains,
+testing robustness and generalization in real-world scenarios.
+</p>
+</div>
 
+<!-- ================== Benchmark ================== -->
+<div class="section">
+<h2>🧠 Benchmark Overview</h2>
+<p>
+The benchmark includes 10 datasets spanning:
+facial expression recognition, medical imaging, agriculture,
+driver behavior, traffic analysis, textures, and more.
+</p>
+
+<p>
+All datasets are standardized into a consistent <b>train/test structure</b>
+to ensure fair evaluation.
+</p>
+</div>
+
+<!-- ================== Tasks ================== -->
+<div class="section">
 <h2>📊 Benchmark Tasks</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>😀 EmoCK / CK+</h3>
-<p>Facial expression recognition across 7 emotion classes.</p>
-<a href="https://github.com/tasneem-mselim/EmoCK">View Repo →</a>
+<p>Facial emotion recognition (7 classes)</p>
+<a href="https://github.com/tasneem-mselim/EmoCK">📂 Repo</a><br>
+<a href="#">🏆 Leaderboard</a>
 </div>
 
 <div class="card">
 <h3>🌿 PLT</h3>
-<p>Plant disease classification across crops and conditions.</p>
-<a href="https://github.com/tasneem-mselim/PLT/tree/main">View Repo →</a>
+<p>Plant disease classification</p>
+<a href="https://github.com/tasneem-mselim/PLT/tree/main">📂 Repo</a><br>
+<a href="#">🏆 Leaderboard</a>
 </div>
 
 <div class="card">
 <h3>🤟 ArabicSL</h3>
-<p>Arabic sign language recognition (32 classes).</p>
-<a href="https://github.com/tasneem-mselim/ArabicSL/tree/main">View Repo →</a>
+<p>Arabic sign language (32 classes)</p>
+<a href="https://github.com/tasneem-mselim/ArabicSL/tree/main">📂 Repo</a><br>
+<a href="#">🏆 Leaderboard</a>
 </div>
 
 <div class="card">
 <h3>♻️ Garbage</h3>
-<p>Waste classification into recycling categories.</p>
-<a href="https://github.com/tasneem-mselim/GarBaGe/tree/main">View Repo →</a>
+<p>Waste classification</p>
+<a href="https://github.com/tasneem-mselim/GarBaGe/tree/main">📂 Repo</a><br>
+<a href="#">🏆 Leaderboard</a>
 </div>
 
 <div class="card">
 <h3>🚦 Traffic</h3>
-<p>Traffic event detection and scene understanding.</p>
-<a href="https://github.com/tasneem-mselim/Traffic/tree/main">View Repo →</a>
+<p>Traffic event detection</p>
+<a href="https://github.com/tasneem-mselim/Traffic/tree/main">📂 Repo</a><br>
+<a href="#">🏆 Leaderboard</a>
 </div>
 
 <div class="card">
 <h3>🚗 DRV</h3>
-<p>Driver behavior classification and distraction detection.</p>
-<a href="https://github.com/tasneem-mselim/DRV/tree/main">View Repo →</a>
+<p>Driver behavior detection</p>
+<a href="https://github.com/tasneem-mselim/DRV/tree/main">📂 Repo</a><br>
+<a href="#">🏆 Leaderboard</a>
 </div>
 
 <div class="card">
 <h3>🧱 CNN4TXT</h3>
-<p>Texture classification across 47 categories.</p>
-<a href="https://github.com/tasneem-mselim/CNN4TXT/tree/main">View Repo →</a>
+<p>Texture classification (47 classes)</p>
+<a href="https://github.com/tasneem-mselim/CNN4TXT/tree/main">📂 Repo</a><br>
+<a href="#">🏆 Leaderboard</a>
 </div>
 
 <div class="card">
 <h3>🦠 SKIN-MPX</h3>
-<p>Skin disease classification including Mpox.</p>
-<a href="https://github.com/tasneem-mselim/SKN-MPX/tree/main">View Repo →</a>
+<p>Skin disease classification</p>
+<a href="https://github.com/tasneem-mselim/SKN-MPX/tree/main">📂 Repo</a><br>
+<a href="#">🏆 Leaderboard</a>
 </div>
 
 <div class="card">
 <h3>🫁 CXR</h3>
-<p>Chest X-ray classification (Normal vs Pneumonia).</p>
-<a href="https://github.com/tasneem-mselim/CXR/tree/main">View Repo →</a>
+<p>Pneumonia detection</p>
+<a href="https://github.com/tasneem-mselim/CXR/tree/main">📂 Repo</a><br>
+<a href="#">🏆 Leaderboard</a>
 </div>
 
 <div class="card">
 <h3>🧬 SKN_CNCER</h3>
-<p>Skin cancer classification using dermatoscopic images.</p>
-<a href="https://github.com/tasneem-mselim/SKN_CNCER/tree/main">View Repo →</a>
+<p>Skin cancer classification</p>
+<a href="https://github.com/tasneem-mselim/SKN_CNCER/tree/main">📂 Repo</a><br>
+<a href="#">🏆 Leaderboard</a>
 </div>
 
 </div>
+</div>
+
+<!-- ================== Dataset ================== -->
+<div class="section">
+<h2>📦 Dataset</h2>
+<p>
+The full benchmark dataset is available on Kaggle with standardized structure.
+</p>
+
+<a class="button" href="https://www.kaggle.com/">Download Dataset</a>
+</div>
+
+<!-- ================== Citation ================== -->
+<!-- <div class="section">
+<h2>📚 Citation</h2> -->
+
+<!-- <pre>
+@article{hlmvision2026,
+  title={HLM-Vision: A Multi-Domain Benchmark for CNN-based Image Classification},
+  author={Tasneem Selim},
+  year={2026}
+}
+</pre> -->
 
 </div>
 
 <footer>
-<p>Created by Tasneem Selim • HLM-Vision Benchmark </p>
+<p>
+Created by Tasneem Selim
+</p>
 </footer>
 
 </body>
